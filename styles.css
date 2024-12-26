@@ -1,0 +1,384 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4ede3; /* Sandal */
+  color: #000; /* Black text */
+  line-height: 1.6;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #000; /* Black background */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  height: 60px; /* Enhanced size */
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #f4ede3; /* Sandal */
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #fff; /* White on hover */
+}
+
+header nav ul li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #f4ede3;
+  transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+header .header-right input {
+  padding: 8px 10px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+  background-color: #f4ede3;
+  border-radius: 5px;
+  outline: none;
+  color: #000;
+}
+
+header .header-right input::placeholder {
+  color: #555;
+}
+
+header .header-right .icon {
+  color: #f4ede3;
+  margin-left: 15px;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header .header-right .icon:hover {
+  color: #fff;
+}
+
+/* Hamburger Menu Styles */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 2em;
+  color: #f4ede3; /* Visible light color */
+}
+
+/* Hero Section */
+.hero {
+  height: 70vh; /* Adjust the height of the hero section */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('path/to/your/background-image.jpg') no-repeat center center; /* Ensure image doesn't repeat */
+  background-size: cover; /* Make sure the image covers the hero section */
+  display: flex;
+  align-items: center;  /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.hero .hero-text {
+  position: relative;
+  z-index: 2;
+  padding: 0 15px; /* Add some padding for text */
+}
+
+.hero h1 {
+  font-size: 3em; /* Adjust heading size */
+  font-weight: bold;
+  margin: 0;
+  padding: 20px;
+  border: 3px solid #f4ede3; /* Sandal border */
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.2em; /* Adjust paragraph font size */
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+.hero .sub-heading {
+  font-size: 1.8em;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #f4ede3; /* Sandal color */
+}
+
+.hero .description {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #f4ede3; /* Sandal color */
+}
+
+.hero .explore-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.2em;
+  background-color: #f4ede3; /* Sandal color */
+  color: #000; /* Black text */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .explore-btn:hover {
+  background-color: #d1c1a1; /* Darker sandal on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Features Section */
+.features {
+  padding: 40px 20px;
+  background-color: #fff; /* Clean white background */
+  border-top: 5px solid #f4ede3;
+  border-bottom: 5px solid #f4ede3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  text-align: center;
+  margin-top: 40px; /* This adds space between the hero and features sections */
+}
+
+.features .feature {
+  background-color: #f4ede3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features .feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.features .feature img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.features .feature h2 {
+  margin-top: 15px;
+  color: #000;
+}
+
+.features .feature p {
+  margin: 10px 0 0;
+  color: #333;
+}
+
+/* Gallery */
+.gallery {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #000;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-row img {
+  max-width: calc(33.33% - 20px);
+  border: 3px solid #f4ede3;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #f4ede3;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer .social-icons a {
+  color: #f4ede3;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+footer .contact-info {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #f4ede3;
+}
+
+/* Product Section */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background-color: #f4ede3; /* Light sandal color for the background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.product img {
+  max-width: 100%; /* Ensure the image fits within the product box */
+  border-radius: 10px;
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.product h3 {
+  margin-top: 15px;
+  color: #000; /* Black text for product name */
+}
+
+.product p {
+  margin: 10px 0;
+  color: #333; /* Dark gray text for product description */
+}
+
+.product .price {
+  font-size: 1.5em; /* Larger price text */
+  color: #000; /* Black text for the price */
+  font-weight: bold; /* Make the price text stand out */
+}
+
+.product .add-to-cart {
+  background-color: #000; /* Black background for Add to Cart button */
+  color: #f4ede3; /* Sandal color for the text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product .add-to-cart:hover {
+  background-color: #f4ede3; /* Sandal color on hover */
+  color: #000; /* Black text on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.product .add-to-cart:active {
+  transform: scale(0.98); /* Shrink the button slightly when clicked */
+}
+
+
+
+@media (max-width: 768px) {
+  .scrollable-img {
+    width: 100%; /* Ensure the image always fills the width of the screen on mobile */
+    height: auto; /* Keep the image's aspect ratio intact */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero .sub-heading {
+    font-size: 1.2em;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  footer .social-icons a {
+    font-size: 1.2em;
+  }
+}
+
